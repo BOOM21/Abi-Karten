@@ -1,0 +1,106 @@
+$background:#282D31;
+body{
+    background-color: $background;
+}
+
+.holder{
+    background-color: $background;
+    width: 400px;
+    height: 225px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input{
+    height: 15%;
+    margin-top: 10%;
+    background-color: #222327;
+    color: #969897;
+}
+
+#submit{    
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+    background-color: #25AEA6; /* Green */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    -webkit-appearance: none;
+}
+
+
+
+.floating-label-mail{
+    color: #969897;
+}
+
+
+.floating-label-password{
+    color: #969897;
+}
+
+.user-input-wrp {        
+    margin: 0 auto;
+    width: 75%;
+    height: 100%;
+}
+.user-input-wrp #inputMail{
+	width: 100%;
+	outline: none;
+	border:none;
+	border-bottom: 1px solid #777;
+ 	box-shadow: none !important;
+}
+.user-input-wrp #inputMail:focus{
+	border-color: blue;
+	border-width: medium medium 2px;
+}
+.user-input-wrp .floating-label-mail {
+	position: absolute;
+	pointer-events: none;
+	top: 39px;
+	left: 56px;
+	transition: 0.3s ease all;
+}
+.user-input-wrp #inputMail:focus ~ .floating-label-mail,
+.user-input-wrp #inputMail:not(:focus):valid ~ .floating-label-mail{
+	top: 11px;
+	left: 54px;
+	font-size: 13px;
+	opacity: 1;
+}
+
+
+
+.user-input-wrp #inputPassword{
+	width: 100%;
+	outline: none;
+	border:none;
+	border-bottom: 1px solid #777;
+ 	box-shadow: none !important;
+}
+.user-input-wrp #inputPassword:focus{
+	border-color: blue;
+	border-width: medium medium 2px;
+}
+.user-input-wrp .floating-label-password {
+	position: absolute;
+	pointer-events: none;
+	top: 107px;
+	left: 56px;
+	transition: 0.3s ease all;
+}
+.user-input-wrp #inputPassword:focus ~ .floating-label-password,
+.user-input-wrp #inputPassword:not(:focus):valid ~ .floating-label-password{
+	top: 79px;
+	left: 54px;
+	font-size: 13px;
+	opacity: 1;
+}

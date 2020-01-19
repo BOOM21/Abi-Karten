@@ -1,0 +1,66 @@
+@import "../../lib/bootstrap-4.2.1/scss/bootstrap.scss";
+
+$background:#282D31;
+$divback: rgb(69, 71, 73);
+$accept: #FF3B30;
+
+body{
+    background-color: $background;
+    overflow: hidden;
+}
+
+.fa-times-circle{text-shadow:4px 2px 12px rgba(0,0,0,0.51)}
+#header{
+    background-color: $accept;
+    width: 100%;
+    height: 4rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .dot {
+        a{
+            color: black;
+        }
+        margin-right: 1rem;
+        float: right;
+        height: 2.5rem;
+        width: 2.5rem;
+        background-color: $divback;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+#main{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#state{
+    p{
+        font-size: 10vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0%;
+        font-weight: bold;
+    }
+    border-radius: 10px;
+    background-color: $divback;
+    margin-bottom: 2rem;
+}
+
+#symbol{
+    height: 16rem;
+    i{
+        font-size: 16rem;
+        color: $accept;
+    }
+    background-color: transparent;
+    margin-bottom: 4rem;
+}
