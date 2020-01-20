@@ -4,7 +4,7 @@
         $_SESSION['userid'] = $user['id'];
     }
     if(!isset($_SESSION['userid'])) {
-        header('location:info');
+        header('location:login');
     }
 ?>
 <!DOCTYPE html>

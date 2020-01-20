@@ -53,20 +53,29 @@
           <div class="name"><?php echo($guest["name"]); ?></div>
           <img id='barcode' 
             src="https://api.qrserver.com/v1/create-qr-code/?data=<?php echo("http://ohg-abi.de/qr?key=".$guest["qr"]); ?>&amp;size=100x100" 
-            alt="" 
-            title="HELLO" 
+            alt="qrcode_<?php echo($guest["name"]); ?>" 
+            title="qrcode_<?php echo($guest["name"]); ?>"
             width="35" 
             height="35" />
         </button>
     </div>
     <div id="collapse<?php echo($i); ?>" class="collapse" aria-labelledby="heading<?php $i ?>" data-parent="#accordion">
       <div class="card-body">
-      <img id='barcode' 
-            src="https://api.qrserver.com/v1/create-qr-code/?data=<?php echo("http://ohg-abi.de/qr?key=".$guest["qr"]); ?>&amp;size=100x100" 
-            alt="" 
-            title="HELLO" 
-            width="50" 
-            height="50" />
+        <div class="row">
+          <div class="col-3 align-self-center">
+            <div class="student">Schüler: <?php echo($guest["student"]); ?></div>
+            <a target="_blank" href="pdf?key=<?php echo($guest["qr"]); ?>&option=I">Vorschau <i class="fas fa-eye"></i></a><br>
+            <a href="pdf?key=<?php echo($guest["qr"]); ?>&option=D">Download <i class="fas fa-file-pdf"></i></a>
+          </div>
+          <div class="offset-7 col-2">
+            <img id='barcode' 
+                  src="https://api.qrserver.com/v1/create-qr-code/?data=<?php echo("http://ohg-abi.de/qr?key=".$guest["qr"]); ?>&amp;size=100x100" 
+                  alt="qrcode_<?php echo($guest["name"]); ?>" 
+                  title="qrcode_<?php echo($guest["name"]); ?>"
+                  width="100" 
+                  height="100" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
