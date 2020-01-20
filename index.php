@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['userid']) && isset($_COOKIE['identifier'])){
+        $_SESSION['userid'] = $user['id'];
+    }
+    if(!isset($_SESSION['userid'])) {
+        header('location:info');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,25 +17,12 @@
     <link rel="stylesheet" type="text/css" href="/css/index/index.min.css" />
 </head>
 <body>
-    Home
-    <a href="login">Login</a>
-    <a href="logout">Logout</a>
-    <a href="allow">Allow</a>
-    <a href="deny">Deny</a>
-    
-    <?php
-    session_start();
-    if(!isset($_SESSION['userid']) && isset($_COOKIE['identifier']))
-        $_SESSION['userid'] = $user['id'];{
-    }
-    if(!isset($_SESSION['userid'])) {
-        die('Bitte zuerst <a href="login.php">einloggen</a>');
-    }
-    
-    //Abfrage der Nutzer ID vom Login
-    $userid = $_SESSION['userid'];
-    
-    echo "Hallo User: ".$userid;
-    ?>
+    <?php if(isset($_SESSION['userid'])): ?>
+        <a href="logout">Logout</a><br>
+    <?php else: ?>
+        <a href="login">Login</a><br>
+    <?php endif; ?>
+    <a href="guests">Guests</a>
+
 </body>
 </html>
