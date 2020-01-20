@@ -6,7 +6,7 @@ if(isset($_GET['login'])) {
     $email = $_POST['email'];
     $passwort = $_POST['passwort'];
     
-    $statement = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+    $statement = $pdo->prepare("SELECT * FROM users WHERE user = :email");
     $result = $statement->execute(array('email' => $email));
     $user = $statement->fetch();
         
@@ -58,8 +58,8 @@ function random_string() {
         <form action="?login=1" method="post" class="holder">
             
             <div class="user-input-wrp">
-                <input type="email" id="inputMail" name="email" class="input" required/>
-                <span class="floating-label-mail">Email Adresse <i class="fas fa-envelope"></i></span>
+                <input type="text" id="inputMail" name="email" class="input" required/>
+                <span class="floating-label-mail">Nutzername <i class="fas fa-user"></i></i></span>
                 
                 <input type="password" id="inputPassword" name="passwort" class="input" required/>
                 <span class="floating-label-password">Passwort <i class="fas fa-lock"></i></span>
