@@ -29,7 +29,10 @@ $pdfAuthor = "Abi Jahrgang 19/20 OHG";
 
 $option = $_GET["option"];
 $logo = '<img src="logo.png">';
-$code = '<img src="code.png">';
+$code = '<img id="barcode" 
+src="https://api.qrserver.com/v1/create-qr-code/?data=http://ohg-abi.de/qr?key='.$_GET["key"].'&amp;size=100x100" 
+width="110" 
+height="110" />';
  
 
 $footer = "Der auf diesem Dokument zu findende QR Code berechtigt die auf dem QR Code hinterlegte und in diesem Dokument genannte Person zum Eintritt auf die Abiturfeier des Abiturjahrgangs 2019/20 am Otto-Hahn-Gymnasium Saarbrücken. Diese Eintrittskarte kann, muss aber nicht ausgedruckt mitgebracht werden. Der Digitale QR Code ist zum Einlass ausreichend.";

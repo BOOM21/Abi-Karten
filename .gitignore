@@ -729,3 +729,11 @@ tcpdf/include/barcodes/qrcode.php
 tcpdf/tools/.htaccess
 tcpdf/tools/convert_fonts_examples.txt
 tcpdf/tools/tcpdf_addfont.php
+css/info/info.css
+css/info/info.css.map
+css/info/info.min.css
+css/info/info.min.css.map
+css/wegbeschreibung/wegbeschreibung.css
+css/wegbeschreibung/wegbeschreibung.css.map
+css/wegbeschreibung/wegbeschreibung.min.css
+css/wegbeschreibung/wegbeschreibung.min.css.map

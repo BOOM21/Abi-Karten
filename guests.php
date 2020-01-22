@@ -9,7 +9,7 @@
 
     $pdo = new PDO("mysql:host=127.0.0.1;dbname=abikarten","web","vKf{DGl1WYon");
 
-    $statement = $pdo->prepare("SELECT * FROM guests");
+    $statement = $pdo->prepare("SELECT * FROM guests ORDER BY `name` ASC");
     $statement->execute();
     $guests = $statement->fetchAll();
 ?>
@@ -19,7 +19,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>OHG-Abi 20</title>
+    <title>OHG-Abi 20 | Gästeliste</title>
     <link rel="stylesheet" type="text/css" href="/css/guests/guests.min.css" />    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
@@ -68,12 +68,14 @@
             <a href="pdf?key=<?php echo($guest["qr"]); ?>&option=D">Download <i class="fas fa-file-pdf"></i></a>
           </div>
           <div class="offset-7 col-2">
-            <img id='barcode' 
-                  src="https://api.qrserver.com/v1/create-qr-code/?data=<?php echo("http://ohg-abi.de/qr?key=".$guest["qr"]); ?>&amp;size=100x100" 
-                  alt="qrcode_<?php echo($guest["name"]); ?>" 
-                  title="qrcode_<?php echo($guest["name"]); ?>"
-                  width="100" 
-                  height="100" />
+            <a target="_blank" href="allow?key=<?php echo($guest["qr"]); ?>">
+              <img id='barcode' 
+                    src="https://api.qrserver.com/v1/create-qr-code/?data=<?php echo("http://ohg-abi.de/qr?key=".$guest["qr"]); ?>&amp;size=100x100" 
+                    alt="qrcode_<?php echo($guest["name"]); ?>" 
+                    title="qrcode_<?php echo($guest["name"]); ?>"
+                    width="100" 
+                    height="100" />
+            </a>
           </div>
         </div>
       </div>

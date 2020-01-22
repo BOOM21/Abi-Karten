@@ -4,7 +4,9 @@
         $_SESSION['userid'] = $user['id'];
     }
     if(!isset($_SESSION['userid'])) {
-        header('location:login');
+        header('location:info');
+    } else {
+        header('location:guests');
     }
 ?>
 <!DOCTYPE html>
