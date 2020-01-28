@@ -7,6 +7,16 @@ body{
     background-color: $background;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+body {
+    -ms-overflow-style: none;
+}
+
+
+
 h1{
     color: #969696;
     text-shadow: 2px 2px 6px black;
