@@ -1,0 +1,76 @@
+@import "../../lib/bootstrap-4.2.1/scss/bootstrap.scss";
+
+$background:#282D31;
+$divback: #9C9C9C;
+
+body{
+    background-color: $background;
+}
+
+h1{
+    color: #969696;
+    text-shadow: 2px 2px 6px black;
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+.faq-container{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#carouselExampleCaptions{
+    box-shadow: 5px 5px 7px black;
+    height: 100%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-body{
+    border-left: 1.5px solid;
+    margin-left: 1.25rem;
+    padding: 1.25rem;
+}
+
+
+
+.card{
+    box-shadow: 5px 5px 7px black;
+    background-color: $divback;
+    margin-bottom: 10px;
+    border-radius: 0px;
+    .card-header{
+        padding: 0;
+        display: flex;
+        .holder{
+            display: flex;
+            align-items: center;
+        }
+        .indicator{
+            font-size: 23px;
+            margin-right: 10px;
+        }
+    }
+    .btn{
+        padding-right: 15px;
+        height: 100%;
+        width: 100%;
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+        hr{
+            margin-left: 33px;
+            background-color: black;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+footer{
+    p{
+        text-align: center;
+    }
+}

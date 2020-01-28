@@ -10,7 +10,102 @@
         crossorigin="anonymous">
 </head>
   <body>
-        Hier steht tolle Info:
-        <a href="wegbeschreibung">Wegbeschreibung</a><br>
+
+    <div class="faq-container">
+        <h1>FAQ</h1>
+        <div class="accordion" id="faq">
+            <div class="card">
+                <div class="card-header" id="questionOne">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#answerOne" aria-expanded="false" aria-controls="answerOne">
+                    <hr>
+                    <div class="holder"><div class="indicator"> 01 </div><div>Wo findet die Abi-Feier statt?</div></div>
+                    <hr>
+                    </button>
+                </div>
+                <div id="answerOne" class="collapse" aria-labelledby="questionOne" data-parent="#faq">
+                <div class="card-body">
+                    <a href="wegbeschreibung">Wegbeschreibung  <i class="fas fa-map-marked-alt"></i></a>
+                </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="questionTwo">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#answerTwo" aria-expanded="false" aria-controls="answerTwo">
+                    <hr>
+                    <div class="holder"><div class="indicator"> 02 </div><div>Ablauf des Tages?</div></div>
+                    <hr>
+                    </button>
+                </div>
+                <div id="answerTwo" class="collapse" aria-labelledby="questionTwo" data-parent="#faq">
+                <div class="card-body">
+                    Hier steht toller Info-Text
+                </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="questionThree">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#answerThree" aria-expanded="false" aria-controls="answerThree">
+                    <hr>
+                    <div class="holder"><div class="indicator"> 03 </div><div>Was kostet ein Ticket?</div></div>
+                    <hr>
+                    </button>
+                </div>
+                <div id="answerThree" class="collapse" aria-labelledby="questionThree" data-parent="#faq">
+                <div class="card-body">
+                    Hier steht toller Info-Text
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1>Bilder</h1>
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="https://via.placeholder.com/1920x1080.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Bild 1</h5>
+                <p>Erklärung zu Bild 1</p>
+            </div>
+            </div>
+            <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x1080.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Bild 2</h5>
+                <p>Erklärung zu Bild 2</p>
+            </div>
+            </div>
+            <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x1080.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Bild 3</h5>
+                <p>Erklärung zu Bild 3</p>
+            </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Vorheriges</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Nächstes</span>
+        </a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  
+
+    <footer>
+          <p><a href="impressum">Impressum/Datenschutz</a></p>
+     </footer>
   </body>
 </html>

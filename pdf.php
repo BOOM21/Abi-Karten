@@ -34,8 +34,7 @@ src="https://api.qrserver.com/v1/create-qr-code/?data=http://ohg-abi.de/qr?key='
 width="110" 
 height="110" />';
  
-
-$footer = "Der auf diesem Dokument zu findende QR Code berechtigt die auf dem QR Code hinterlegte und in diesem Dokument genannte Person zum Eintritt auf die Abiturfeier des Abiturjahrgangs 2019/20 am Otto-Hahn-Gymnasium Saarbrücken. Diese Eintrittskarte kann, muss aber nicht ausgedruckt mitgebracht werden. Der Digitale QR Code ist zum Einlass ausreichend.";
+$footer = '<p style="text-align:center;font-size: 8px;">Der auf diesem Dokument zu findende QR Code berechtigt die auf dem QR Code hinterlegte und in diesem Dokument genannte Person zum Eintritt auf die Abiturfeier des Abiturjahrgangs 2019/20 am Otto-Hahn-Gymnasium Saarbrücken. Diese Eintrittskarte kann, muss aber nicht ausgedruckt mitgebracht werden. Der Digitale QR Code ist zum Einlass ausreichend.<br><br>Mit dem Kauf dieser Karte habe ich eingewillgt, dass die auf der Karte angegebenen personenbezogenen Daten zwecks Einlasskontrolle im Kartensystem des Abiturjahrgangs hinterlegt werden. Ich bin darüber aufgeklärt worden, dass diese binnen 2 Wochen nach der Veranstallung vollständig gelöscht werden. Ich bestätige ebenso, dass die angegebenen Daten korrekt sind.</p>';
  
 $pdfName = "Karte_".$guest."_abifeier.pdf";
  
