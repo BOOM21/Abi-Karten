@@ -13,15 +13,18 @@
         $name = $_POST["name"];
         $student = $_POST["student"];
         $qr = uniqid("", true);
-        echo($name."<br>");
-        echo($student."<br>");
-        echo($qr."<br>");
         $pdo = new PDO("mysql:host=127.0.0.1;dbname=abikarten","web","vKf{DGl1WYon");
         $statement = $pdo->prepare("INSERT INTO guests (name, student, qr) VALUES (?, ?, ?)");
         $statement->execute(array($name, $student, $qr)); 
         header('location:guests');
+    } else if(isset($_GET["remove"])){
+        $qr = $_GET["remove"];
+        $pdo = new PDO("mysql:host=127.0.0.1;dbname=abikarten","web","vKf{DGl1WYon");
+        $statement = $pdo->prepare("DELETE FROM guests WHERE qr = '".$qr."'");
+        $statement->execute(); 
+        header('location:guests');
     } else {
-        //header('location:info');
+        header('location:info');
     }
 
 ?>

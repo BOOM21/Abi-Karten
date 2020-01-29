@@ -65,6 +65,10 @@ a:hover{
 }
 
 .card{
+    .qrCol{
+        padding-right: 0px;
+        text-align: right;
+    }
     box-shadow: 5px 5px 7px black;
     background-color: $divback;
     border-radius: 0px;
@@ -80,5 +84,21 @@ a:hover{
         font-size: 20px;
         color: black;
         text-decoration: none;
+    }    
+    .qrcode{
+        display: inline-block;
+    }
+    .removeCol{
+        .removeContainer{
+            display: inline-block;
+            text-align: center;
+            .removeLink{
+                width: 25px;
+                height: 25px;
+                text-align: center;
+                border-radius: 50%;
+                font-size: 22px;
+            }
+        }
     }
 }

@@ -67,15 +67,22 @@
             <a target="_blank" href="pdf?key=<?php echo($guest["qr"]); ?>&option=I">Vorschau <i class="fas fa-eye"></i></a><br>
             <a href="pdf?key=<?php echo($guest["qr"]); ?>&option=D">Download <i class="fas fa-file-pdf"></i></a>
           </div>
-          <div class="offset-7 col-2">
-            <a target="_blank" href="allow?key=<?php echo($guest["qr"]); ?>">
-              <img id='barcode' 
-                    src="https://api.qrserver.com/v1/create-qr-code/?data=<?php echo("http://ohg-abi.de/qr?key=".$guest["qr"]); ?>&amp;size=100x100" 
-                    alt="qrcode_<?php echo($guest["name"]); ?>" 
-                    title="qrcode_<?php echo($guest["name"]); ?>"
-                    width="100" 
-                    height="100" />
-            </a>
+          <div class="offset-6 col-2 qrCol">
+            <div class="qrcode">
+              <a target="_blank" href="allow?key=<?php echo($guest["qr"]); ?>">
+                <img id='barcode' 
+                      src="https://api.qrserver.com/v1/create-qr-code/?data=<?php echo("http://ohg-abi.de/qr?key=".$guest["qr"]); ?>&amp;size=100x100" 
+                      alt="qrcode_<?php echo($guest["name"]); ?>" 
+                      title="qrcode_<?php echo($guest["name"]); ?>"
+                      width="100" 
+                      height="100" />
+              </a>
+            </div>
+          </div>
+          <div class="col-1 removeCol">
+            <div class="removeContainer">
+              <a href="functions?remove=<?php echo($guest["qr"]) ?>" class="removeLink"><i class="far fa-times-circle"></i></a>
+            </div>
           </div>
         </div>
       </div>
