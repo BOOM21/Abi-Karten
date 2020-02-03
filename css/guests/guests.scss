@@ -2,11 +2,88 @@
 
 $background:#282D31;
 $divback: #9C9C9C;
+
+$text-color: #8D8D93;
+$input-color: #C6C6C9;
+
 body{
     background-color: $background;
+    position: relative;
+}
+
+#configContainer{
+    background-color: $divback;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    #searchBarContainer{
+        height: 50%;
+        background-color: $input-color;
+        margin-left: 15px;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        .fa-search{    
+            margin-left: 8px;
+            color: $text-color;
+            font-size: 15px;
+            text-align: center;
+        }
+        #searchBar{  
+            padding-left: 3px;
+            font-size: 15px;
+            color: $text-color;
+            border-radius: 25px;
+            height: 100%;
+            background-color: transparent;
+            border-color: transparent;
+        }
+        #searchBar:focus{
+            outline: none;
+        }
+    }
+
+    
+    #sortToggle{
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+        color: $text-color;
+        height: 50%;
+        background-color: $input-color;
+        margin-right: 15px;
+        border-radius: 25px;
+        .btn-primary{
+            background-color: #7F7F7F;
+            border-color: transparent;
+            text-align: center;
+        }
+        .toggle, .toggle-on, .toggle-off {
+            border-radius: 20rem; 
+        }
+        .toggle .toggle-handle { 
+            border-radius: 20rem; 
+        }
+        .sortContent{
+            float: left;
+            margin-left: 10px;
+            margin-right: 10px;   
+            font-size: 15px;
+        }
+    }
 }
 
 .formbtn{
+    position: absolute;
+    top: 0;
+    right: 0;
     box-shadow: 5px 5px 7px black;
     float: right;
     background-color: $divback;
@@ -74,6 +151,10 @@ a:hover{
 
 .collapse.show{
     position: relative;
+}
+
+.offset-7.col-2{
+    text-align: center;
 }
 
 .card{

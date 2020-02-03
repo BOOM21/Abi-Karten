@@ -20,11 +20,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OHG-Abi 20 | Gästeliste</title>
-    <link rel="stylesheet" type="text/css" href="/css/guests/guests.min.css" />    
+    <link rel="stylesheet" type="text/css" href="/css/guests/guests.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap4-toggle.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
 </head>
 <body>
+<div id="configContainer">
+
+  <div id="searchBarContainer">
+    <i class="fas fa-search"></i>
+    <input id="searchBar" type="text" placeholder="Suche...">
+  </div>
+
+  <div id="sortToggle">
+    <div class="sortContent">Alphabetisch</div>
+    <input id="toggle-event" type="checkbox" data-toggle="toggle" data-size="xs" data-on=" " data-off=" " data-onstyle="primary" data-offstyle="primary">
+    <div class="sortContent">Nach Schüler</div>
+  </div>
+  
+</div>
 
 <button class="btn formbtn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     <i class="fas fa-plus"></i>
@@ -92,6 +107,14 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="js/bootstrap4-toggle.min.js"></script>
+<script>
+  $(function() {
+    $('#toggle-event').change(function() {
+      console.log($(this).prop('checked'));
+    })
+  })
+</script>
 </body>
 </html>
 
