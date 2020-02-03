@@ -62,7 +62,7 @@
 
 <div class="accordion" id="accordion">
 <?php $i=0; foreach($guests as $guest): ?>
-  <div class="card">
+  <div class="card guest">
     <div class="card-header" id="heading<?php echo($i); ?>">
         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse<?php echo($i); ?>" aria-expanded="false" aria-controls="collapse<?php echo($i); ?>">
           <div class="name"><?php echo($guest["name"]); ?></div>
@@ -114,6 +114,54 @@
       console.log($(this).prop('checked'));
     })
   })
+  window.addEventListener("load", function(){
+    var alpha = [];
+    var schüler = [];
+    $('.guest').each(function(){
+      //console.log($(this).find(".card-header").find(".btn").find(".name").text());
+      //console.log($(this).find(".collapse").find(".card-body").find(".row").find(".col-3").find(".student").text());
+
+      var alphaArr = [];
+      var schülerArr = [];
+      
+      alphaArr.push($(this).find(".card-header").find(".btn").find(".name").text());
+      alphaArr.push($(this));
+      alpha.push(alphaArr);
+      alpha.sort();
+      
+      
+      schülerArr.push($(this).find(".collapse").find(".card-body").find(".row").find(".col-3").find(".student").text());
+      schülerArr.push($(this));
+      schüler.push(schülerArr);
+      schüler.sort();
+      
+    })
+    //console.log(alpha);
+    //console.log(schüler);
+  $('#toggle-event').change(function() {
+      $('.guest').remove();
+      if($(this).prop('checked')){
+        console.log("Schüler");  
+        for(var i=0; i<schüler.length; i++){
+          $('#accordion').append(schüler[i][1]);
+        }
+      } else {
+        console.log("Alphabetisch");  
+        for(var i=0; i<alpha.length; i++){
+          $('#accordion').append(alpha[i][1]);
+        } 
+      }
+    })
+
+    $(document).ready(function(){
+      $("#searchBar").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#accordion .card-header .btn .name").filter(function() {
+          $(this).parent().parent().parent().toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+  });
 </script>
 </body>
 </html>
