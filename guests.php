@@ -12,6 +12,26 @@
     $statement = $pdo->prepare("SELECT * FROM guests ORDER BY `name` ASC");
     $statement->execute();
     $guests = $statement->fetchAll();
+
+    $statement = $pdo->prepare("SELECT COUNT(*) FROM guests");
+    $statement->execute();
+    $guestnumber = $statement->fetch();
+    $guestnumber = $guestnumber[0][0];
+
+    $statement = $pdo->prepare("SELECT COUNT(DISTINCT student) FROM guests WHERE student != 'Kollegium'");
+    $statement->execute();
+    $studentNumber = $statement->fetch();
+    $studentNumber = $studentNumber[0][0];
+
+    $statement = $pdo->prepare("SELECT COUNT(*) FROM guests WHERE student = 'Kollegium'");
+    $statement->execute();
+    $teacher = $statement->fetch();
+    $teacher = $teacher[0][0];
+
+    $statement = $pdo->prepare("SELECT COUNT(*) FROM guests WHERE entrance = '1'");
+    $statement->execute();
+    $entrance = $statement->fetch(); 
+    $entrance = $entrance[0][0];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,24 +46,39 @@
         crossorigin="anonymous">
 </head>
 <body>
-<div id="configContainer">
 
+<div class="infoContainer">
+  <p>
+    <i class="fas fa-user"></i> Gäste insgesamt: <?php echo($guestnumber); ?><br>
+  </p>
+  <p>
+    <i class="fas fa-user-check"></i> Bereits eingelassen: <?php echo($entrance); ?> <br>
+  </p>
+  <p>
+    <i class="fas fa-user-graduate"></i> Schüler: <?php echo($studentNumber); ?> <br>
+  </p>
+  <p>
+    <i class="fas fa-chalkboard-teacher"></i> Lehrer: <?php echo($teacher); ?>
+  </p>
+
+</div>
+
+<div id="configContainer">
   <div id="searchBarContainer">
     <i class="fas fa-search"></i>
     <input id="searchBar" type="text" placeholder="Suche...">
   </div>
-
   <div id="sortToggle">
     <div class="sortContent">Alphabetisch</div>
     <input id="toggle-event" type="checkbox" data-toggle="toggle" data-size="xs" data-on=" " data-off=" " data-onstyle="primary" data-offstyle="primary">
     <div class="sortContent">Nach Schüler</div>
   </div>
-  
 </div>
 
 <button class="btn formbtn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     <i class="fas fa-plus"></i>
 </button>
+
 <div class="collapse addform" id="collapseExample">
   <div class="card card-body">
   <form action="functions" method="post">

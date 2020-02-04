@@ -11,7 +11,27 @@ body{
     position: relative;
 }
 
+.infoContainer{   
+    padding: 7px;
+    position: absolute;
+    background-color: $divback;
+    box-shadow: 5px 5px 7px black;
+    left: 12px;
+    p{
+        margin: 0;
+        font-size: 18px;
+        margin-top: 20px;
+        .fas{
+            font-size: 23px;
+        }
+    }
+    p:first-child{
+        margin-top: 0;
+    }
+}
+
 #configContainer{
+    box-shadow: 5px 5px 7px black;
     background-color: $divback;
     width: 75%;
     margin-left: auto;
@@ -21,6 +41,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 15px;
 
 
     #searchBarContainer{
