@@ -47,22 +47,6 @@
 </head>
 <body>
 
-<div class="infoContainer">
-  <p>
-    <i class="fas fa-user"></i> Gäste insgesamt: <?php echo($guestnumber); ?><br>
-  </p>
-  <p>
-    <i class="fas fa-user-check"></i> Bereits eingelassen: <?php echo($entrance); ?> <br>
-  </p>
-  <p>
-    <i class="fas fa-user-graduate"></i> Schüler: <?php echo($studentNumber); ?> <br>
-  </p>
-  <p>
-    <i class="fas fa-chalkboard-teacher"></i> Lehrer: <?php echo($teacher); ?>
-  </p>
-
-</div>
-
 <div id="configContainer">
   <div id="searchBarContainer">
     <i class="fas fa-search"></i>
@@ -73,6 +57,22 @@
     <input id="toggle-event" type="checkbox" data-toggle="toggle" data-size="xs" data-on=" " data-off=" " data-onstyle="primary" data-offstyle="primary">
     <div class="sortContent">Nach Schüler</div>
   </div>
+</div>
+
+<div class="infoContainer">
+  <p>
+    <i class="fas fa-user"></i> Gäste insgesamt: <?php echo($guestnumber); ?>
+  </p>
+  <p>
+    <i class="fas fa-user-check"></i> Bereits eingelassen: <?php echo($entrance); ?>
+  </p>
+  <p>
+    <i class="fas fa-user-graduate"></i> Schüler: <?php echo($studentNumber); ?>
+  </p>
+  <p>
+    <i class="fas fa-chalkboard-teacher"></i> Lehrer: <?php echo($teacher); ?>
+  </p>
+
 </div>
 
 <button class="btn formbtn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
