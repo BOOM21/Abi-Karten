@@ -12,7 +12,7 @@ Screenshots und Demo für die Kartenkontrolle:
 
 <img src="https://github.com/BOOM21/Abi-Karten/blob/master/Screenshots/Code_Recognized.PNG" alt="Allowed" width="200"/> <img src="https://github.com/BOOM21/Abi-Karten/blob/master/Screenshots/Already_In.PNG" alt="Already In" width="200"/> <img src="https://github.com/BOOM21/Abi-Karten/blob/master/Screenshots/Code_Unknown.PNG" alt="Denied" width="200"/>
 
-https://github.com/BOOM21/Abi-Karten/blob/master/Screenshots/Demo%20Vid.mp4
+Demo Video: https://yannic-hock.de/wp-content/uploads/2021/07/Demo-Vid.mp4
 
 
 
