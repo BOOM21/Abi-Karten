@@ -12,6 +12,8 @@ Screenshots und Demo für die Kartenkontrolle:
 
 <img src="https://github.com/BOOM21/Abi-Karten/blob/master/Screenshots/Code_Recognized.PNG" alt="Allowed" width="200"/> <img src="https://github.com/BOOM21/Abi-Karten/blob/master/Screenshots/Already_In.PNG" alt="Already In" width="200"/> <img src="https://github.com/BOOM21/Abi-Karten/blob/master/Screenshots/Code_Unknown.PNG" alt="Denied" width="200"/>
 
+https://github.com/BOOM21/Abi-Karten/blob/master/Screenshots/Demo%20Vid.mp4
+
 
 
 Gehostet wird die Seite auf einer Debian 10 VM meines Homeservers, den ich über Proxmox verwalte. Die MySQL zum Apache Service läuft ebenfalls auf dieser VM
