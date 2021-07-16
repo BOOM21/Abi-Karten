@@ -10,7 +10,7 @@ Zur Darstellung und Berechnung der Wegbeschreibung und der dazugehörigen Karte 
 
 Screenshots und Demo für die Kartenkontrolle:
 
-<img src="https://github.com/BOOM21/Abi-Karten/blob/master/Screenshots/Code_Recognized.PNG" alt="Allowed" width="200"/> <img src="https://github.com/BOOM21/Abi-Karten/blob/master/Screenshots/Already_In.PNG" alt="Already In" width="200"/> <img src="https://github.com/BOOM21/Abi-Karten/blob/master/Screenshots/Code_Unknown.PNG" alt="Denied" width="200"/>
+<img src="https://raw.githubusercontent.com/BOOM21/Abi-Karten/master/Screenshots/Code_Recognized.PNG?token=AFPAC4QGWFMQNU4264266VDA7LOLK" alt="Allowed" width="200"/> <img src="https://raw.githubusercontent.com/BOOM21/Abi-Karten/master/Screenshots/Already_In.PNG?token=AFPAC4QJDMGI5M47H2J52QLA7LOFY" alt="Already In" width="200"/> <img src="https://raw.githubusercontent.com/BOOM21/Abi-Karten/master/Screenshots/Code_Unknown.PNG?token=AFPAC4WEZT6UNG4G5WOAFHLA7LONG" alt="Denied" width="200"/>
 
 Demo Video: https://yannic-hock.de/wp-content/uploads/2021/07/Demo-Vid.mp4
 
